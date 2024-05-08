@@ -1,10 +1,10 @@
-import { config } from "dotenv";
+import "utils/env";
 import OpenAI from "openai";
 
-config();
+console.log(process.env.OPENAI_API_KEY);
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 async function main() {
